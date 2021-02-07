@@ -3,6 +3,7 @@ const next = document.querySelector('#btn-right')
 const slider = document.querySelector('.slider-wrapper')
 const navMobile = document.querySelector('.nav-mobile')
 const carousel = document.querySelector('.carousel-wrapper')
+const scrollBall = document.querySelector('.ball')
 
 let direction = -1;
 
@@ -43,7 +44,7 @@ slider.addEventListener('transitionend', function() {
   slider.style.transition = 'none';
   slider.style.transform = 'translate(0)';
   setTimeout(() => {
-    slider.style.transition = 'all 0.5s';
+    slider.style.transition = 'all 1s';
   })
 }, false);
 
@@ -67,4 +68,22 @@ document.querySelector('.nav-menu').addEventListener('click', function(){
   this.classList.toggle('croix')
   navMobile.style.left === "0px" ? navMobile.style.left = "100%" : navMobile.style.left = "0px";
   navMobile.style.display === "flex" ? navMobile.style.display = "none" : navMobile.style.display = "flex";
+})
+
+let anim= scrollBall.animate([
+  {top: '25px',opacity: 0}
+],
+{
+  duration: 1000,
+  iterations: Infinity
+})
+
+window.addEventListener('scroll', (e)=>{
+  if(window.scrollY > 50){
+    anim.pause()
+  }
+  else{
+    anim.play()
+
+  }
 })
