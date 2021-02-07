@@ -5,14 +5,17 @@ html, body {
     padding: 0;
     font-family: sans-serif;
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
     min-height: 200vh;
 }
 *{
     box-sizing: border-box;
 }
+.site{
+    overflow-x: hidden;
+}
 header{
-    position: sticky;
-
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -60,7 +63,7 @@ header{
     overflow: hidden;
     display: flex;
     top: 0;
-    position: absolute;
+    position: relative;
 }
 .carousel-wrapper{
     width: 100%;
@@ -218,7 +221,7 @@ header{
     height: 50px;
     border: 2px solid wheat;
     border-radius: 8px;
-    bottom: 3em;
+    bottom: 6em;
     left: 50%;
     transform: translateX(-50%);
     .ball{
@@ -238,6 +241,7 @@ header{
     header{
         justify-content: flex-start;
         padding-left: 2em;
+        position: fixed;
         nav{display: none;}
         .nav-mobile{
             position: absolute;
@@ -248,9 +252,9 @@ header{
             background-color: #1d1d1df7;
             justify-content: center;
             align-items: center;
-            display: none;
-            transition: all .3s ;
+            transition: all .5s ;
             overflow: hidden;
+            display: flex;
             ul{
                 padding: 0;
                 margin: 0;

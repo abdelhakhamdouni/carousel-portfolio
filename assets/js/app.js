@@ -1,9 +1,11 @@
 const preview = document.querySelector('#btn-left')
 const next = document.querySelector('#btn-right')
 const slider = document.querySelector('.slider-wrapper')
+const navToggler = document.querySelector('.nav-menu')
 const navMobile = document.querySelector('.nav-mobile')
 const carousel = document.querySelector('.carousel-wrapper')
 const scrollBall = document.querySelector('.ball')
+const navbar = document.querySelector('.navbar')
 
 let direction = -1;
 
@@ -64,14 +66,26 @@ function sliding (int) {
   }, int);
 } 
 
-document.querySelector('.nav-menu').addEventListener('click', function(){
+// TOGGLE MENU ON MOBILE
+
+navToggler.addEventListener('click', function(){
   this.classList.toggle('croix')
   navMobile.style.left === "0px" ? navMobile.style.left = "100%" : navMobile.style.left = "0px";
-  navMobile.style.display === "flex" ? navMobile.style.display = "none" : navMobile.style.display = "flex";
+  // navMobile.style.display === "flex" ? navMobile.style.display = "none" : navMobile.style.display = "flex";
+})
+
+navMobile.querySelectorAll('ul li a').forEach(ele =>{
+  ele.addEventListener('click', function() {
+    navMobile.querySelectorAll('ul li a').forEach(ele =>{ele.classList.remove('active')})
+    this.classList.add('active')
+    navToggler.classList.toggle('croix')
+    navMobile.style.left = "100%"
+    // navMobile.style.display = "none" 
+  })
 })
 
 let anim= scrollBall.animate([
-  {top: '25px',opacity: 0}
+  {top: '20px',opacity: 0}
 ],
 {
   duration: 1000,
@@ -81,9 +95,18 @@ let anim= scrollBall.animate([
 window.addEventListener('scroll', (e)=>{
   if(window.scrollY > 50){
     anim.pause()
+    scrollBall.parentNode.style.display= "none"
   }
   else{
+    scrollBall.parentNode.style.display= "block"
     anim.play()
+  }
 
+  if(scrollY > window.innerHeight - 100){
+    navbar.style.backgroundColor = "#444444ee"
+    navbar.style.boxShadow = "0 0 5px #444444"
+  }else{
+    navbar.style.backgroundColor = "unset"
+    navbar.style.boxShadow = "none"
   }
 })
