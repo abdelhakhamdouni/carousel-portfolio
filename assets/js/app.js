@@ -52,7 +52,6 @@ slider.addEventListener('transitionend', function() {
 
 slider.addEventListener('mouseenter', ()=>{
   clearInterval(slide)
-  sliding(interval)
 })
 slider.addEventListener('mouseleave', ()=>{
   sliding(interval)

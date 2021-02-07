@@ -76,6 +76,19 @@ header nav ul li a:hover {
   overflow: hidden;
 }
 
+.carousel__content {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 20, 78, 0.527);
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .slider-wrapper {
   width: 500%;
   display: flex;
@@ -126,24 +139,6 @@ header nav ul li a:hover {
   padding: 0;
   margin: 0;
 }
-.slide .content button {
-  display: none;
-  position: relative;
-  padding: 1em 1.5em;
-  border: 1px solid #287428;
-  border-radius: 3px;
-  background-color: #287428;
-  color: white;
-  margin-top: 1em;
-  transition: all 0.3s;
-  cursor: pointer;
-  z-index: 100;
-}
-.slide .content button:hover {
-  border-width: 2px;
-  background-color: transparent;
-  color: #287428;
-}
 
 .controls {
   position: absolute;
@@ -155,17 +150,20 @@ header nav ul li a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 0 4em;
+  z-index: 10;
 }
 .controls .left, .controls .right {
   border-left: 5px solid white;
   border-bottom: 5px solid white;
   transform: rotate(45deg);
+  opacity: 0.3;
   background-color: transparent;
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
 .controls .left:hover, .controls .right:hover {
+  opacity: 1;
   transform: rotate(45deg) scale(1.1);
 }
 .controls .right {
@@ -240,6 +238,24 @@ header nav ul li a:hover {
   top: 5px;
 }
 
+button {
+  position: relative;
+  padding: 1em 1.5em;
+  border: 1px solid #287428;
+  border-radius: 3px;
+  background-color: #287428;
+  color: white;
+  margin-top: 1em;
+  transition: all 0.3s;
+  cursor: pointer;
+  z-index: 100;
+}
+button:hover {
+  border-width: 2px;
+  background-color: transparent;
+  color: #287428;
+}
+
 .nav-mobile {
   display: none;
 }
@@ -292,5 +308,17 @@ header nav ul li a:hover {
 
   .controls {
     display: none;
+  }
+
+  .carousel__content h1, .carousel__content h2 {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0 3em;
+    text-shadow: 0 0 15px #010647;
+  }
+  .carousel__content h2 {
+    font-size: 1em;
+    padding: 2em;
+    color: #e7e1e1;
   }
 }/*# sourceMappingURL=style.css.map */

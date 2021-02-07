@@ -73,6 +73,18 @@ header{
     position: relative;
     overflow: hidden;
 }
+.carousel__content{
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 20, 78, 0.527);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .slider-wrapper{
     width: 500%;
     display: flex;
@@ -123,24 +135,7 @@ header{
             padding: 0;
             margin: 0;
         }
-        button{
-            display: none;
-            position: relative;
-            padding: 1em 1.5em;
-            border: 1px solid #287428;
-            border-radius: 3px;
-            background-color: #287428;
-            color: white;
-            margin-top: 1em;
-            transition: all .3s;
-            cursor: pointer;
-            z-index: 100;
-            &:hover{
-                border-width: 2px;
-                background-color: transparent;
-                color: #287428;
-            }
-        }
+
     }
 }
 .controls{
@@ -153,15 +148,18 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0 4em;
+    z-index: 10;
     .left, .right{
         border-left: 5px solid white;
         border-bottom: 5px solid white;
         transform: rotate(45deg);
+        opacity: .3;
         background-color: transparent;
         width: 20px;
         height: 20px;
         cursor: pointer;
         &:hover{
+            opacity: 1;
             transform: rotate(45deg) scale(1.1);
         }
     }
@@ -236,6 +234,23 @@ header{
         //animation: scrollDawn 1s infinite;
     }
 }
+button{
+    position: relative;
+    padding: 1em 1.5em;
+    border: 1px solid #287428;
+    border-radius: 3px;
+    background-color: #287428;
+    color: white;
+    margin-top: 1em;
+    transition: all .3s;
+    cursor: pointer;
+    z-index: 100;
+    &:hover{
+        border-width: 2px;
+        background-color: transparent;
+        color: #287428;
+    }
+}
 .nav-mobile{display: none;}
 @media screen and (max-width: 990px){
     header{
@@ -282,5 +297,19 @@ header{
     }
     .controls{
         display: none;
+    }
+    .carousel__content{
+        h1, h2{
+            font-size: 1.5em;
+            text-align: center;
+            padding: 0 3em;
+            text-shadow: 0 0 15px rgb(1, 6, 71);
+        }
+        h2{
+           font-size: 1em; 
+           padding: 2em;
+           color: rgb(231, 225, 225);
+        }
+
     }
 }
