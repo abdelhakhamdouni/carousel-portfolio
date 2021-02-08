@@ -1,77 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="site">
-        <header class="navbar">
-            <img src="assets/logo/logo.png" alt="logo du site" class="logo">
-            <nav>
-                <ul>
-                    <li><a class="active" href="#">Home</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <nav class="nav-mobile">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="nav-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+      <header class="navbar">
+        <div class="section__content">
+          <img src="assets/logo/logo.png" alt="logo du site" class="logo" />
+          <nav>
+            <ul>
+              <li><a class="active" href="#">Home</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <nav class="nav-mobile">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <section class="container-wrapper">
+        <!-- CAROUSEL -->
+        <div class="carousel-wrapper">
+          <section class="slider-wrapper">
+            <article class="slide">
+              <img
+                src="/assets/img/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg"
+                alt=""
+              />
+            </article>
+            <article class="slide">
+              <img
+                src="/assets/img/nubelson-fernandes-VWknHPYlXp0-unsplash.jpg"
+                alt=""
+              />
+            </article>
+            <article class="slide">
+              <img
+                src="/assets/img/nubelson-fernandes-YaOONA_SKWg-unsplash.jpg"
+                alt=""
+              />
+            </article>
+            <article class="slide">
+              <img
+                src="/assets/img/oliver-pecker-HONJP8DyiSM-unsplash.jpg"
+                alt=""
+              />
+            </article>
+            <article class="slide">
+              <img
+                src="/assets/img/yahdi-romelo-5NZhpuZVo7g-unsplash.jpg"
+                alt=""
+              />
+            </article>
+          </section>
+          <div class="carousel__content">
+            <h1 class="title">
+              Hi, je suis Abdelhak. Développeur WEB et WEB MOBILE.
+            </h1>
+            <h2>
+              Création de site internet, amélioration du référencement et
+              optimisation, basé à Ormes, dans le Loiret.
+            </h2>
+          </div>
+          <div class="controls">
+            <span class="left" id="btn-left"></span>
+            <span class="right" id="btn-right"></span>
+          </div>
+          <div class="scroll-down">
+            <div class="ball"></div>
+          </div>
+        </div>
+      </section>
+      <section class="services" id="services">
+        <h2 class="section__title">Mes services</h2>
+        <p class="section__desc">
+          Vous avez une idée d'un site web
+          <strong>vitrine, e-commerce ou blog</strong>, une
+          <strong>application mobile</strong>, vous voulez refaire votre site
+          web, l'adapter aux écrans des smartphones, améliorer son
+          <strong>référencement</strong>, vous êtes au bon endroit.
+        </p>
+        <section class="section__content">
+          <article class="service__card">
+            <div class="card__image">
+              <img src="assets/img/icons/010-device.svg" alt="" />
             </div>
-        </header>
-        <main class="container-wrapper">
-            <div class="carousel-wrapper">
-                <section class="slider-wrapper">
-                    <article class="slide">
-                        <img src="/assets/img/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg" alt="">
-                    </article>
-                    <article class="slide">
-                        <img src="/assets/img/nubelson-fernandes-VWknHPYlXp0-unsplash.jpg" alt="">
-                    </article>
-                    <article class="slide">
-                        <img src="/assets/img/nubelson-fernandes-YaOONA_SKWg-unsplash.jpg" alt="">
-                    </article>
-                    <article class="slide">
-                        <img src="/assets/img/oliver-pecker-HONJP8DyiSM-unsplash.jpg" alt="">
-                    </article>
-                    <article class="slide">
-                        <img src="/assets/img/yahdi-romelo-5NZhpuZVo7g-unsplash.jpg" alt="">   
-                    </article>
-                </section>
-                <div class="carousel__content">
-                    <h1 class="title">Hi, je suis Abdelhak. Développeur WEB et WEB MOBILE.</h1>
-                    <h2>Création de site internet, amélioration du référencement et optimisation, basé à Ormes, dans le Loiret.</h2>
-                </div>
-                <div class="controls">
-                    <span class="left" id="btn-left"></span>
-                    <span class="right" id="btn-right"></span>
-                </div>
-                <div class="scroll-down">
-                    <div class="ball"></div>
-                </div>
+            <div class="card__title">
+              <h3>Mon service</h3>
             </div>
-            <section class="services">
+            <div class="card__body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                error ad enim numquam nemo,
+              </p>
+            </div>
+          </article>
+          <article class="service__card">
+            <div class="card__image">
+              <img src="assets/img/icons/006-web-coding.svg" alt="" />
+            </div>
+            <div class="card__title">
+              <h3>Mon service</h3>
+            </div>
+            <div class="card__body">
+              <p>
+                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Iure error ad enim numquam nemo,
+              </p>
+            </div>
+          </article>
+          <article class="service__card">
+            <div class="card__image">
+              <img src="assets/img/icons/039-startup.svg" alt="" />
+            </div>
+            <div class="card__title">
+              <h3>Mon service</h3>
+            </div>
+            <div class="card__body">
+              <p>
+                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Iure error ad enim numquam nemo,
+              </p>
+            </div>
+          </article>
+          <article class="service__card">
+            <div class="card__image">
+              <img src="assets/img/icons/009-web development.svg" alt="" />
+            </div>
+            <div class="card__title">
+              <h3>Mon service</h3>
+            </div>
+            <div class="card__body">
+              <p>
+                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Iure error ad enim numquam nemo,
+              </p>
+            </div>
+          </article>
+        </section>
+      </section>
+      <section class="services call-to-action" id="services">
+        <section class="section__content">
+            <p>
+                Pour mieux connaitre votre projet et vous apporter la solution la mieux adapté, envoyez-moi un message en détaillant vos besoins et vos attentes.
+            </p>
+            <button class="call-to-action_btn">
+                Avoir un devis gratuit 
+            </button>
+        </section>
+      </section>
+      <section class="realisation" id="services">
+        <h2 class="section__title">Mes réalisations</h2>
+        <p class="section__desc">
+          Mes créations de site internet durant ces quelques années
+          d'apprentissage et de travail.
+        </p>
+        <section class="section__content projets">
+            <article  class="projet">
+                <img src="/assets/img/portfolio/p1.jpg" alt="">
+                <div class="projet__content">
+                    <h3 class="projet__title">
+                        projet title
+                    </h3>
+                    <p class="projet__desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, officiis nihil hic quia quam nam.
+                    </p>
+                    <a href="" class="projet__url">
+                        Lorem, ipsum dolor.
+                    </a>
+                </div>
+            </article>
+            <article  class="projet">
+                <img src="/assets/img/portfolio/p2.jpg" alt="">
+                <div class="projet__content">
 
-            </section>
-        </main>
+                    <h3 class="projet__title">
+                        projet title
+                    </h3>
+                    <p class="projet__desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, officiis nihil hic quia quam nam.
+                    </p>
+                    <a href="" class="projet__url">
+                        Lorem, ipsum dolor.
+                    </a>
+                </div>
+            </article>
+            <article  class="projet">
+                <img src="/assets/img/portfolio/p3.jpg" alt="">
+                <div class="projet__content">
+
+                    <h3 class="projet__title">
+                        projet title
+                    </h3>
+                    <p class="projet__desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, officiis nihil hic quia quam nam.
+                    </p>
+                    <a href="" class="projet__url">
+                        Lorem, ipsum dolor.
+                    </a>
+                </div>
+            </article>
+            <article  class="projet">
+                <img src="/assets/img/portfolio/p4.jpg" alt="">
+                <div class="projet__content">
+
+                    <h3 class="projet__title">
+                        projet title
+                    </h3>
+                    <p class="projet__desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, officiis nihil hic quia quam nam.
+                    </p>
+                    <a href="" class="projet__url">
+                        Lorem, ipsum dolor.
+                    </a>
+                </div>
+            </article>
+            <article  class="projet">
+                <img src="/assets/img/portfolio/p5.jpg" alt="">
+                <div class="projet__content">
+
+                    <h3 class="projet__title">
+                        projet title
+                    </h3>
+                    <p class="projet__desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, officiis nihil hic quia quam nam.
+                    </p>
+                    <a href="" class="projet__url">
+                        Lorem, ipsum dolor.
+                    </a>
+                </div>
+            </article>
+            <article  class="projet">
+                <img src="/assets/img/portfolio/p6.jpg" alt="">
+                <div class="projet__content">
+
+                    <h3 class="projet__title">
+                        projet title
+                    </h3>
+                    <p class="projet__desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, officiis nihil hic quia quam nam.
+                    </p>
+                    <a href="" class="projet__url">
+                        Lorem, ipsum dolor.
+                    </a>
+                </div>
+            </article>
+            
+        </section>
+      </section>
     </div>
     <script src="assets/js/app.js"></script>
-</body>
-
+  </body>
 </html>

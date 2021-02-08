@@ -6,6 +6,7 @@ const navMobile = document.querySelector('.nav-mobile')
 const carousel = document.querySelector('.carousel-wrapper')
 const scrollBall = document.querySelector('.ball')
 const navbar = document.querySelector('.navbar')
+const projet = document.querySelector('.projet')
 
 let direction = -1;
 
