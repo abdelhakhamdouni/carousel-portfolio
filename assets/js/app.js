@@ -6,7 +6,7 @@ const navMobile = document.querySelector('.nav-mobile')
 const carousel = document.querySelector('.carousel-wrapper')
 const scrollBall = document.querySelector('.ball')
 const navbar = document.querySelector('.navbar')
-const projet = document.querySelector('.projet')
+const projets = document.querySelectorAll('.projet')
 
 let direction = -1;
 
@@ -109,4 +109,10 @@ window.addEventListener('scroll', (e)=>{
     navbar.style.backgroundColor = "unset"
     navbar.style.boxShadow = "none"
   }
+})
+
+projets.forEach(ele => {
+  ele.addEventListener('click', function(){
+    this.classList.toggle('absolute-projet')
+  })
 })
